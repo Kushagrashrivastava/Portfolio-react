@@ -1,14 +1,15 @@
 import "./WorkCardStyles.css";
 import WorkCard from "./WorkCard";
 import WorkCardData from "./WorkCardData";
-
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 
 const Work = () => {
+  const { t } = useTranslation();
   return (
     <div className="work-container">
-      <h1 className="project-heading">Projects</h1>
+      <h1 className="project-heading">{t('Project')}</h1>
       <div className="project-container">
         {WorkCardData.map((val, ind) => {
           return(
